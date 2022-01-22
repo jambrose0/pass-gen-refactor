@@ -11,7 +11,7 @@ var char = {
 };
 
 
-//function generate password
+// generate password function
 function generatePassword() {
   var password = "";
   var actualPassword = "";
@@ -20,7 +20,8 @@ function generatePassword() {
   var wantsUpper = window.confirm("Would you like Uppercase letters?");
   var wantsLower = window.confirm("Would you like lowercase letters?");
   var wantsNumber = window.confirm("Would you like numbers?");
-  //too small or large of password characters
+
+  //check proper size of password characters
   while (charLength < 8 || charLength > 128) {
     charLength= prompt("Your password must be between 8 and 128 characters");
      }
@@ -37,6 +38,7 @@ function generatePassword() {
   if (wantsNumber) {
     password += char.number;
    }
+   //if they don't choose any of the options
   if (
      !wantsSpecial &&
      !wantsNumber &&
