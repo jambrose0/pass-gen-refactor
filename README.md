@@ -19,4 +19,4 @@
 
 ## Image of functionality:
 
-![An app window with the label Password Generator, an input field labeled Your Secure Password, and a Generate Password button.](./assets/images/passGenScreenCap)
+![An app window with the label Password Generator, an input field labeled Your Secure Password, and a Generate Password button.](./assets/images/passGenScreenCap.png)
