@@ -1,6 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+//character variables for password
 var char = {
   lower: "abcdefghijklmnopqrstuvwxys",
   upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -8,10 +10,11 @@ var char = {
   special: '!@#$%^&*()'
 };
 
+
+//function generate password
 function generatePassword() {
   var password = "";
-  var actualPassword = '';
-  var passChar = "";
+  var actualPassword = "";
   var charLength = prompt("How long would you like your password? Must be between 8 and 128 characters");
   var wantsSpecial = window.confirm("Would you like special characters?");
   var wantsUpper = window.confirm("Would you like Uppercase letters?");
