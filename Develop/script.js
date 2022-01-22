@@ -1,24 +1,40 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowerCase = "abcdefghijklmnopqrstuvwxys";
-var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var numbs = '0123456789';
-var specialChar = '!@#$%^&*()';
 
-var wantsSpecial = true;
-var wantsCapital = true;
-var wantsLower = true;
-var wantsNumber = true;
+var pass = {
+  lower: "abcdefghijklmnopqrstuvwxys",
+  upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  numbers: '0123456789',
+  special: '!@#$%^&*()'
+};
 
 function generatePassword() {
-  var length = prompt("How long would you like your password? Must be between 8 and 128 characters");
-  console.log(length);
-  if (length >= 8 && length <= 128) {
-    window.prompt("Would you like special characters?");
-    if (wantsCapital = true) {
-     var specialToUse = specialChar[Math.floor(Math.random() * specialChar.length)];
+  var passLength = prompt("How long would you like your password? Must be between 8 and 128 characters");
+  console.log(passLength);
+
+  var wantsSpecial = window.prompt("Would you like special characters?");
+  var wantsCapital = window.confirm("Would you like Uppercase letters?");
+  var wantsLower = window.confirm("Would you like lowercase letters?");
+  var wantsNumber = window.confirm("Would you like numbers?");
+
+  if (passLength >= 8 && passLength <= 128) {
+    // window.confirm("Would you like special characters?");
+    if (wantsSpecial = true) {
+     var specialToUse = pass.special[Math.floor(Math.random() * pass.special.length)];
     }
     console.log(specialToUse);
+  } if (wantsCapital = true) {
+    var capitalToUse = pass.upper[Math.floor(Math.random() * pass.upper.length)];
+    console.log(capitalToUse);
+  } if (wantsLower = true) {
+    var lowerToUse = pass.lower[Math.floor(Math.random()* pass.lower.length)];
+    console.log(lowerToUse);
+  } if (wantsNumber = true) {
+    var numberToUse = pass.numbers[Math.floor(Math.random()*pass.numbers.length)];
+    console.log(numberToUse);
+  }
+  else {
+    window.alert("Password must be between 8 and 128 characters.  Please try again");
   }
 
 
